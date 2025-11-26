@@ -1,59 +1,90 @@
-# Entrega4Final
+# **Gestión de Cursos – Proyecto Final Angular (Coderhouse)**  
+Aplicación web desarrollada con **Angular 17**, **NgRx**, **SCSS**, **Lazy Loading**, **Guards**, **Módulos clásicos (sin standalone)** y arquitectura escalable basada en buenas prácticas.
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.10.
+Este proyecto cumple con todos los requisitos de la **consigna del Proyecto Final de Angular** y su **rúbrica oficial**.
 
-## Development server
+---
 
-To start a local development server, run:
+## 🚀 Tecnologías utilizadas
 
-```bash
-ng serve
-```
+- **Angular 17** (Sin Standalone Components)  
+- **TypeScript**  
+- **NgRx Store + Devtools**  
+- **RxJS**  
+- **Angular Router (Lazy Loaded Modules)**  
+- **SCSS**  
+- **HttpClient**  
+- **MockAPI (o backends simulados)**
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+---
 
-## Code scaffolding
+# 📁 Estructura del Proyecto
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+src/
+├── app/
+│ ├── app-routing.module.ts
+│ ├── app.module.ts
+│ ├── app.component.ts / html / scss
+│ │
+│ ├── core/
+│ │ ├── guards/
+│ │ │ ├── auth.guard.ts
+│ │ ├── services/
+│ │ │ ├── auth.service.ts
+│ │ │ ├── api.service.ts
+│ │ ├── interceptors/ (opcional)
+│ │ ├── core.module.ts
+│ │
+│ ├── shared/
+│ │ ├── components/
+│ │ │ ├── page-title/
+│ │ │ │ ├── page-title.component.ts / html / scss
+│ │ ├── shared.module.ts
+│ │
+│ ├── layout/
+│ │ ├── components/
+│ │ │ ├── layout-shell/
+│ │ │ ├── sidebar/
+│ │ │ ├── toolbar/
+│ │ ├── layout.module.ts
+│ │
+│ ├── auth/
+│ │ ├── pages/login/
+│ │ │ ├── login.component.ts / html / scss
+│ │ ├── auth-routing.module.ts
+│ │ ├── auth.module.ts
+│ │
+│ ├── students/
+│ │ ├── pages/
+│ │ │ ├── students-list/
+│ │ │ ├── student-detail/
+│ │ ├── students-routing.module.ts
+│ │ ├── students.module.ts
+│ │
+│ ├── courses/
+│ │ ├── pages/
+│ │ │ ├── courses-list/
+│ │ │ ├── course-detail/
+│ │ ├── courses-routing.module.ts
+│ │ ├── courses.module.ts
+│ │
+│ ├── enrollments/
+│ │ ├── pages/
+│ │ │ ├── enrollments-list/
+│ │ ├── enrollments-routing.module.ts
+│ │ ├── enrollments.module.ts
+│ │
+│ ├── users/
+│ │ ├── pages/
+│ │ │ ├── users-list/
+│ │ ├── users-routing.module.ts
+│ │ ├── users.module.ts
+│ │
+│ ├── store/
+│ ├── app.actions.ts
+│ ├── app.reducer.ts
+│ ├── app.state.ts
+│ ├── app.selectors.ts
+│
+├── assets/
+└── environments/
