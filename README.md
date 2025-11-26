@@ -1,6 +1,5 @@
 
 # **Gestión de Cursos – Proyecto Final Angular (Coderhouse)**  
->>>>>>> 338027be3d92e67a586b985114525c6f45796975
 Aplicación web desarrollada con **Angular 17**, **NgRx**, **SCSS**, **Lazy Loading**, **Guards**, **Módulos clásicos (sin standalone)** y arquitectura escalable basada en buenas prácticas.
 
 <<<<<<< HEAD
