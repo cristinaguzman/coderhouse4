@@ -1,0 +1,16 @@
+<aside class="sidebar" *ngIf="(currentUser$ | async) as user">
+  <div class="sidebar-header">
+    <h1>Gestión Cursos Angular</h1>
+    <p>{{ user.nombre }} ({{ user.perfil }})</p>
+  </div>
+
+  <nav class="sidebar-nav">
+    <a routerLink="/alumnos" routerLinkActive="active">Alumnos</a>
+    <a routerLink="/cursos" routerLinkActive="active">Cursos</a>
+    <a routerLink="/inscripciones" routerLinkActive="active">Inscripciones</a>
+    <a *ngIf="user.perfil === 'admin'" routerLink="/usuarios" routerLinkActive="active">
+      Usuarios
+    </a>
+    <button type="button" (click)="onLogout()">Logout</button>
+  </nav>
+</aside>

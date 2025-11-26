@@ -1,0 +1,12 @@
+<app-page-title title="Detalle de curso"></app-page-title>
+
+<div *ngIf="course; else notFound">
+  <p><strong>Nombre:</strong> {{ course.nombre }}</p>
+  <p><strong>Horas:</strong> {{ course.cantidadHoras }}</p>
+  <p><strong>Clases:</strong> {{ course.cantidadClases }}</p>
+  <p><strong>Profesor:</strong> {{ course.profesor }}</p>
+</div>
+
+<ng-template #notFound>
+  <p>Curso no encontrado.</p>
+</ng-template>

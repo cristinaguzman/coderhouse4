@@ -1,0 +1,24 @@
+<app-page-title title="Gestión de inscripciones"></app-page-title>
+
+<table *ngIf="enrollments.length; else empty">
+  <thead>
+    <tr>
+      <th>ID Alumno</th>
+      <th>ID Curso</th>
+      <th>Fecha</th>
+      <th>ID Usuario</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let e of enrollments">
+      <td>{{ e.idAlumno }}</td>
+      <td>{{ e.idCurso }}</td>
+      <td>{{ e.fechaInscripcion }}</td>
+      <td>{{ e.idUsuario }}</td>
+    </tr>
+  </tbody>
+</table>
+
+<ng-template #empty>
+  <p>No hay inscripciones registradas.</p>
+</ng-template>

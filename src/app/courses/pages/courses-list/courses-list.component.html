@@ -1,0 +1,28 @@
+<app-page-title title="Listado de cursos"></app-page-title>
+
+<table *ngIf="courses.length; else empty">
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Horas</th>
+      <th>Clases</th>
+      <th>Profesor</th>
+      <th>Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let c of courses">
+      <td>{{ c.nombre }}</td>
+      <td>{{ c.cantidadHoras }}</td>
+      <td>{{ c.cantidadClases }}</td>
+      <td>{{ c.profesor }}</td>
+      <td>
+        <a [routerLink]="[c.id]">Ver detalle</a>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<ng-template #empty>
+  <p>No hay cursos cargados.</p>
+</ng-template>

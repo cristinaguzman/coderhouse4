@@ -1,0 +1,10 @@
+<app-page-title title="Detalle de alumno"></app-page-title>
+
+<div *ngIf="student; else notFound">
+  <p><strong>Nombre:</strong> {{ student.nombre }}</p>
+  <p><strong>Perfil:</strong> {{ student.perfil }}</p>
+</div>
+
+<ng-template #notFound>
+  <p>Alumno no encontrado.</p>
+</ng-template>

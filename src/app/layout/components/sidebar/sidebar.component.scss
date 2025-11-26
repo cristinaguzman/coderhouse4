@@ -1,0 +1,35 @@
+.sidebar {
+  width: 260px;
+  background: #20232a;
+  color: #fff;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-header h1 {
+  font-size: 1.1rem;
+  margin-bottom: 0.25rem;
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.sidebar-nav a,
+.sidebar-nav button {
+  background: transparent;
+  border: none;
+  color: inherit;
+  text-align: left;
+  padding: 0.25rem 0;
+  cursor: pointer;
+}
+
+.sidebar-nav a.active {
+  font-weight: 600;
+  text-decoration: underline;
+}

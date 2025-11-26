@@ -1,0 +1,9 @@
+<header class="toolbar">
+  <div class="toolbar-left">
+    <h2>Gestión Cursos Angular</h2>
+    <span class="toolbar-title">/ {{ (title$ | async) || 'Inicio' }}</span>
+  </div>
+  <div class="toolbar-right" *ngIf="(currentUser$ | async) as user">
+    <span>Usuario: {{ user.nombre }}</span>
+  </div>
+</header>

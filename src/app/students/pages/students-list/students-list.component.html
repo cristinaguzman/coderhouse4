@@ -1,0 +1,24 @@
+<app-page-title title="Listado de alumnos"></app-page-title>
+
+<table *ngIf="students.length; else empty">
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Perfil</th>
+      <th>Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let s of students">
+      <td>{{ s.nombre }}</td>
+      <td>{{ s.perfil }}</td>
+      <td>
+        <a [routerLink]="[s.id]">Ver detalle</a>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<ng-template #empty>
+  <p>No hay alumnos cargados.</p>
+</ng-template>
