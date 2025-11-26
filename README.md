@@ -143,4 +143,4 @@ Cristina Guzmán
 - **HttpClient**  
 - **MockAPI (o backends simulados)**
 /
->>>>>>> 338027be3d92e67a586b985114525c6f45796975
+
