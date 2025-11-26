@@ -18,22 +18,72 @@ Aplicación web desarrollada con **Angular 17**, **NgRx**, **SCSS**, **Lazy Load
 ```
 src/
 ├── app/
-│   ├── app-routing.module.ts
-│   ├── app.module.ts
-│   ├── app.component.ts / html / scss
-│   ├── core/
-│   │   ├── guards/
-│   │   ├── services/
-│   │   ├── interceptors/
-│   │   ├── core.module.ts
-│   ├── shared/
-│   ├── layout/
-│   ├── auth/
-│   ├── students/
-│   ├── courses/
-│   ├── enrollments/
-│   ├── users/
-│   ├── store/
+│ ├── app-routing.module.ts
+│ ├── app.module.ts
+│ ├── app.component.ts / html / scss
+│ │
+│ ├── core/
+│ │ ├── guards/
+│ │ │ ├── auth.guard.ts
+│ │ ├── services/
+│ │ │ ├── auth.service.ts
+│ │ │ ├── api.service.ts
+│ │ ├── interceptors/ (opcional)
+│ │ ├── core.module.ts
+│ │
+│ ├── shared/
+│ │ ├── components/
+│ │ │ ├── page-title/
+│ │ │ │ ├── page-title.component.ts / html / scss
+│ │ ├── shared.module.ts
+│ │
+│ ├── layout/
+│ │ ├── components/
+│ │ │ ├── layout-shell/
+│ │ │ ├── sidebar/
+│ │ │ ├── toolbar/
+│ │ ├── layout.module.ts
+│ │
+│ ├── auth/
+│ │ ├── pages/login/
+│ │ │ ├── login.component.ts / html / scss
+│ │ ├── auth-routing.module.ts
+│ │ ├── auth.module.ts
+│ │
+│ ├── students/
+│ │ ├── pages/
+│ │ │ ├── students-list/
+│ │ │ ├── student-detail/
+│ │ ├── students-routing.module.ts
+│ │ ├── students.module.ts
+│ │
+│ ├── courses/
+│ │ ├── pages/
+│ │ │ ├── courses-list/
+│ │ │ ├── course-detail/
+│ │ ├── courses-routing.module.ts
+│ │ ├── courses.module.ts
+│ │
+│ ├── enrollments/
+│ │ ├── pages/
+│ │ │ ├── enrollments-list/
+│ │ ├── enrollments-routing.module.ts
+│ │ ├── enrollments.module.ts
+│ │
+│ ├── users/
+│ │ ├── pages/
+│ │ │ ├── users-list/
+│ │ ├── users-routing.module.ts
+│ │ ├── users.module.ts
+│ │
+│ ├── store/
+│ ├── app.actions.ts
+│ ├── app.reducer.ts
+│ ├── app.state.ts
+│ ├── app.selectors.ts
+│
+├── assets/
+└── environments/
 ```
 
 ## 🔐 Autenticación y Perfiles
